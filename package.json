@@ -1,0 +1,61 @@
+{
+  "name": "easel",
+  "version": "0.1.0",
+  "description": "A shared Excalidraw canvas for a person and a coding agent. A showcase for Reins.",
+  "private": true,
+  "license": "MIT",
+  "author": "Serhii Troinin",
+  "homepage": "https://github.com/serhiitroinin/easel#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/serhiitroinin/easel.git"
+  },
+  "bugs": {
+    "url": "https://github.com/serhiitroinin/easel/issues"
+  },
+  "keywords": [
+    "reins",
+    "agent",
+    "claude-code",
+    "codex",
+    "excalidraw",
+    "electron",
+    "canvas",
+    "whiteboard"
+  ],
+  "type": "module",
+  "main": ".build/main/index.js",
+  "scripts": {
+    "build:web": "vite build",
+    "build:main": "bun build src/main/index.ts --target=node --format=esm --packages=external --outdir .build/main",
+    "build:preload": "bun build src/preload/index.ts --target=node --format=cjs --external electron --outfile .build/preload/index.cjs",
+    "build": "bun run build:web && bun run build:main && bun run build:preload",
+    "start": "bunx --bun electron .",
+    "dev": "bun run build && bun run start",
+    "dev:offline": "bun run build && EASEL_OFFLINE=1 bun run start",
+    "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.web.json",
+    "test": "bun test",
+    "screenshots:live": "bun run build && bun run scripts/live-shots.ts",
+    "screenshots": "bun run build && bun run scripts/screenshots.ts",
+    "check:offline": "bun run build && bun run scripts/offline-check.ts"
+  },
+  "dependencies": {
+    "@excalidraw/excalidraw": "0.18.1",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "reins": "0.2.0"
+  },
+  "devDependencies": {
+    "@types/bun": "1.4.2",
+    "@types/node": "22.20.2",
+    "@types/react": "19.2.0",
+    "@types/react-dom": "19.2.0",
+    "@vitejs/plugin-react": "6.1.1",
+    "electron": "43.4.1",
+    "typescript": "5.9.3",
+    "vite": "8.2.2"
+  },
+  "trustedDependencies": [
+    "electron"
+  ]
+}

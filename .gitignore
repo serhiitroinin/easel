@@ -1,0 +1,22 @@
+# Dependencies and build output
+node_modules/
+.build/
+dist/
+out/
+
+# Local data and secrets
+.env*
+.demo/
+
+# Logs
+*.log
+logs/
+
+# Editors and operating system
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# The project scripts are tracked.
+!scripts/

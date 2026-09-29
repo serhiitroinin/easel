@@ -5,10 +5,10 @@
     "": {
       "name": "easel",
       "dependencies": {
-        "reins": "/tmp/reins-0.1.1.tgz",
         "@excalidraw/excalidraw": "0.18.1",
         "react": "19.2.0",
         "react-dom": "19.2.0",
+        "reins": "github:serhiitroinin/reins#v0.2.0",
       },
       "devDependencies": {
         "@types/bun": "1.4.2",
@@ -24,6 +24,7 @@
   },
   "trustedDependencies": [
     "electron",
+    "reins",
   ],
   "packages": {
     "@agentclientprotocol/sdk": ["@agentclientprotocol/sdk@1.4.0", "", { "peerDependencies": { "zod": "^3.25.0 || ^4.0.0" } }, "sha512-/eufudw+aFY1LKLolT6yFE6UMmYRl7fMJ/DEONSIyR6wI3slHWITBsANRGqXEY8FRzqUxwh7QEaGiZHcJPVThg=="],
@@ -656,7 +657,7 @@
 
     "readdirp": ["readdirp@3.6.0", "", { "dependencies": { "picomatch": "^2.2.1" } }, "sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA=="],
 
-    "reins": ["reins@/tmp/reins-0.1.1.tgz", { "dependencies": { "@agentclientprotocol/sdk": "1.4.0", "@anthropic-ai/claude-agent-sdk": "0.3.257", "@modelcontextprotocol/sdk": "1.30.0", "zod": "4.6.5" }, "bin": { "reins-sidecar": "dist/bin/reins-sidecar.js" } }],
+    "reins": ["reins@github:serhiitroinin/reins#608d5b5", { "dependencies": { "@agentclientprotocol/sdk": "1.4.0", "@anthropic-ai/claude-agent-sdk": "0.3.257", "@modelcontextprotocol/sdk": "1.30.0", "zod": "4.6.5" }, "bin": { "reins-sidecar": "dist/bin/reins-sidecar.js" } }, "serhiitroinin-reins-608d5b5"],
 
     "require-from-string": ["require-from-string@2.0.2", "", {}, "sha512-Xf0nWe6RseziFMu+Ap9biiUbmplq6S9/p+7w7YXP/JBHhrUDDUhwa+vANyubuqfZWTveU//DYVGsDG7RKL/vEw=="],
 

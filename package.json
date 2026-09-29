@@ -43,7 +43,7 @@
     "@excalidraw/excalidraw": "0.18.1",
     "react": "19.2.0",
     "react-dom": "19.2.0",
-    "reins": "0.2.0"
+    "reins": "github:serhiitroinin/reins#v0.2.0"
   },
   "devDependencies": {
     "@types/bun": "1.4.2",
@@ -56,6 +56,7 @@
     "vite": "8.2.2"
   },
   "trustedDependencies": [
-    "electron"
+    "electron",
+    "reins"
   ]
 }
